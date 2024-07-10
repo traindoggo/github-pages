@@ -1,16 +1,13 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-
-import Container from "./components/container";
-import Footer from "./components/footer";
+import "../styles/tailwind.css";
 import Header from "./components/header";
-import "./styles/tailwind.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Portfolio",
-  description: "This is my very first published site.",
+  description: "My very first published website",
 };
 
 export default function RootLayout({
@@ -21,14 +18,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.className} min-h-screen
-      bg-neutral-900`}
+        className={`${inter.className} flex flex-col mx-20
+        min-h-screen bg-neutral-800 text-neutral-200
+        text-xl`}
       >
-        <Container>
-          <Header />
-          {children}
-          <Footer />
-        </Container>
+        <Header />
+        {children}
       </body>
     </html>
   );
