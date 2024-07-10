@@ -1,5 +1,4 @@
 import { blogs } from "@/db/seed";
-import Link from "next/link";
 
 export default function BlogPage() {
   return (
@@ -15,8 +14,7 @@ export default function BlogPage() {
             flex flex-col gap-4 mt-6`}
       >
         {blogs.map((blog) => (
-          <Link
-            href={`/blogs/${blog.id}`}
+          <div
             key={blog.id}
             className={`flex flex-col p-4 border border-neutral-500 rounded`}
           >
@@ -27,7 +25,7 @@ export default function BlogPage() {
             >
               {blog.content}
             </p>
-          </Link>
+          </div>
         ))}
       </div>
     </main>
