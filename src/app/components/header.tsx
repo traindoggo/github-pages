@@ -21,7 +21,7 @@ export default function Header() {
     <header
       className={`flex gap-4 px-4 py-2
       bg-neutral-950 border-neutral-800
-      border-b-4`}
+      border-b-4 sticky top-0`}
     >
       {links.map((link) => (
         <Link
