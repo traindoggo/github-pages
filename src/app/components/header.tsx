@@ -19,7 +19,7 @@ export default function Header() {
 
   return (
     <header
-      className={`flex gap-4 p-4
+      className={`flex gap-4 px-4 py-2
       bg-neutral-950 border-neutral-800
       border-b-4`}
     >
@@ -28,7 +28,7 @@ export default function Header() {
           key={link.title}
           className={`${
             pathname == link.href ? "text-neutral-50" : "text-neutral-700"
-          } text-xl duration-150`}
+          } text-xl lg:text-2xl duration-150`}
           href={link.href}
         >
           {link.title}
