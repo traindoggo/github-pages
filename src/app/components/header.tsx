@@ -19,15 +19,16 @@ export default function Header() {
 
   return (
     <header
-      className="flex gap-4 p-4 bg-neutral-950 border-neutral-800
-      border-b-4"
+      className={`flex gap-4 p-4
+      bg-neutral-950 border-neutral-800
+      border-b-4`}
     >
       {links.map((link) => (
         <Link
           key={link.title}
           className={`${
             pathname == link.href ? "text-neutral-50" : "text-neutral-700"
-          } duration-150`}
+          } text-xl duration-150`}
           href={link.href}
         >
           {link.title}
